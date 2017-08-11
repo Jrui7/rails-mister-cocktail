@@ -1,7 +1,11 @@
-<h1>Welcome</h1>
+<div class="text-center">
+  <h1>Welcome</h1>
 
-<h3><%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary"%></h3>
+  <h3><%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary"%></h3>
 
-<% @cocktails.each do |cocktail| %>
-  <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-<% end %>
+  <% @cocktails.each do |cocktail| %>
+    <div class="container">
+      <h4 class="cocktail"><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+    </div>
+  <% end %>
+</div>
